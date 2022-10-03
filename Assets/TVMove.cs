@@ -19,7 +19,7 @@ public class TVMove : MonoBehaviour
         transform.rotation = Quaternion.Euler(positions[pos].rotation);
     }
 
-    void Start() {
+    void Awake() {
         Singleton = this;
     }
 }

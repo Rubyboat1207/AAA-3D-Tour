@@ -25,6 +25,7 @@ public class MapManager : MonoBehaviour
 
     void Start() {
         Singleton = this;
+        TVMove.Singleton.UpdateLocation(mapId);
     }
 
 
@@ -85,6 +86,8 @@ public class MapManager : MonoBehaviour
                         }
                     }
                 }
+                TVMove.Singleton.UpdateLocation(mapId);
+                VideoManager.Singleton.UpdateVideoStatus(false);
             }
         }
         
